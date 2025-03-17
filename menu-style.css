@@ -1,0 +1,262 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Barra superior */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00;
+    padding: 0px 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Hace que la barra se mantenga fija */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo alineado a la izquierda */
+.logo {
+    height: 201px;
+    border-radius: 0px;
+}
+
+/* Título centrado */
+.title {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    color: blue;
+}
+
+/* Sección derecha (perfil pegado a la derecha, menú abajo) */
+.right-section {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-end;  /* Pegamos todo a la derecha */
+    justify-content: flex-end;  
+    gap: 5px;  /* Menos espacio entre perfil y menú */
+}
+
+/* Perfil pegado a la derecha */
+.profile-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0%;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+/* Botón del perfil */
+.profile-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Menú de navegación */
+.main-menu {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos de los botones del menú */
+.menu-btn {
+    background-color: #ff944d;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.catalog-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    gap: 30px; /* Espacio entre los elementos */
+    margin-top: 20px; /* Espaciado debajo de la barra */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor principal de la sección */
+.catalog-container {
+    display: flex;
+    justify-content: center;  /* Centra los elementos en la página */
+    align-items: center;
+    gap: 40px;  /* Espaciado entre las columnas */
+    margin-top: 220px;  /* Separación de la barra superior */
+    padding: 20px;
+}
+
+.catalog-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+/* Texto encima de la imagen */
+.catalog-item p {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para que resalte */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    width: auto;
+}
+
+/* Estilos de la miniatura */
+.catalog-item img {
+    width: 540px;
+    height: 960px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al pasar el cursor */
+.catalog-item:hover {
+    transform: scale(1.1);
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* === MODAL DEL ASISTENTE VIRTUAL === */
+.assistant-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Clase para mostrar el modal */
+.assistant-modal.show {
+    display: block;
+}
+
+/* Botón de cerrar */
+.close-assistant {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.assistant-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Clase para mostrar el modal */
+.assistant-modal.show {
+    display: block;
+}
+
+/* Efecto cuando se pasa el cursor sobre el div */
+#openAssistantDiv {
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+/* Cambio al pasar el cursor */
+#openAssistantDiv:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    background-color: #ffd700; /* Cambia el fondo a amarillo dorado */
+}
+
+

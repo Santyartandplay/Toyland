@@ -1,0 +1,282 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Barra superior */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00;
+    padding: 0px 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Hace que la barra se mantenga fija */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo alineado a la izquierda */
+.logo {
+    height: 201px;
+    border-radius: 0px;
+}
+
+/* Título centrado */
+.title {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    color: blue;
+}
+
+/* Sección derecha (perfil pegado a la derecha, menú abajo) */
+.right-section {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-end;  /* Pegamos todo a la derecha */
+    justify-content: flex-end;  
+    gap: 5px;  /* Menos espacio entre perfil y menú */
+}
+
+/* Perfil pegado a la derecha */
+.profile-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 0%;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+/* Botón del perfil */
+.profile-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Menú de navegación */
+.main-menu {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos de los botones del menú */
+.menu-btn {
+    background-color: #ff944d;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 0px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+/* === MODAL DEL ASISTENTE VIRTUAL === */
+.assistant-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Clase para mostrar el modal */
+.assistant-modal.show {
+    display: block;
+}
+
+/* Botón de cerrar */
+.close-assistant {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* === COLUMNA LATERAL IZQUIERDA === */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 80px; /* Ajusta según la altura de la barra superior */
+    width: 250px; /* Ancho de la columna */
+    height: calc(100vh - 80px); /* Altura ajustada */
+    background-color: #ddd; /* Color de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar-image {
+    width: 100%; /* Se adapta al ancho */
+    height: auto;
+    border-radius: 0px;
+}
+
+/* === CONTENEDOR PRINCIPAL DE LA LISTA DE DESEOS === */
+.wishlist-container {
+    margin: 50px auto 50px auto; /* Espaciado para evitar que la barra superior tape contenido */
+    max-width: 85%; /* Ajusta el ancho de la lista */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 400px;
+}
+
+/* === LISTA DE PRODUCTOS === */
+#wishlist-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los productos se ajusten al ancho */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* === ESTILO DE CADA PRODUCTO === */
+.wishlist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px; /* Tamaño fijo para cada producto */
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.wishlist-item:hover {
+    transform: scale(1.05);
+}
+
+/* === IMAGEN DEL PRODUCTO === */
+.toy-image {
+    width: 50px !important;  /* Tamaño fijo */
+    height: 50px !important; /* Tamaño fijo */
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* === NOMBRE DEL PRODUCTO === */
+.toy-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* === CONTROL DE CANTIDAD === */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.quantity-controls button {
+    background-color: #ff944d;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.quantity-controls button:hover {
+    transform: scale(1.1);
+}
+
+.quantity {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* === BOTONES DE ACCIÓN === */
+.remove-btn, .add-to-cart-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin-top: 5px;
+    transition: transform 0.2s;
+}
+
+.add-to-cart-btn {
+    background-color: #4caf50;
+}
+
+.remove-btn:hover, .add-to-cart-btn:hover {
+    transform: scale(1.1);
+}

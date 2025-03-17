@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Toyland App</title>
+    <link rel="stylesheet" href="menu-style.css">
+</head>
+<a href="https://wa.me/573204881964" class="whatsapp-button" target="_blank">
+    🟢
+    <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
+</a>
+
+<body>
+    <!-- Barra superior con menú integrado -->
+    <header class="navbar">
+        <img src="assets/images/Logo2.png" alt="Logo Toyland" class="logo" id="logo">
+        <h1 class="title">TOYLAND APP</h1>
+
+        <!-- Sección derecha: Perfil arriba y menú abajo -->
+        <div class="right-section">
+            <!-- Perfil arriba -->
+            <div class="profile-box">
+                <p id="userStatus"></p>
+                <button class="profile-btn">👤  Perfil</button>
+            </div>
+
+            <!-- Menú abajo -->
+            <nav class="main-menu">                   
+                <button class="menu-btn" id="homeButton">🏠</button>
+                <div class="dropdown">
+                    <button class="menu-btn">📞 ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Soporte</a>
+                        <a href="#">Atención al Cliente</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="menu-btn">📜 Secciones ▼</button>
+                    <div class="dropdown-content">
+                        <a href="catalogo.html">📦 CATÁLOGO DE JUGUETES</a>
+                        <a href="minijuego.html">🎮 MINIJUEGOS</a>
+                        <a href="#" id="openAssistantLink">🤖 ASISTENTE VIRTUAL</a>
+                        <a href="deseos.html">⭐ LISTA DE DESEOS</a>
+                        <a href="ofertas.html">🔥 OFERTAS Y NOVEDADES</a>
+                    </div>
+                </div>
+                <button class="menu-btn">🛒</button>
+                <button class="menu-btn">⭐</button>
+                <button class="menu-btn">❓</button>
+            </nav>
+        </div>
+    </header>
+
+</header>
+
+<!-- Catálogo fuera de la barra superior -->
+<section class="catalog-container">
+    <div class="catalog-item">
+        <a href="catalogo.html">
+            <p>CATÁLOGO DE JUGUETES</p>
+            <img src="assets/images/catalogo.png" alt="CATÁLOGO DE JUGUETES">
+        </a>
+    </div>
+    <div class="catalog-item">
+        <a href="minijuego.html">
+            <p>MINIJUEGOS</p>
+            <img src="assets/images/minijuegos.png" alt="MINIJUEGOS">
+        </a>
+    </div>
+    <div id="openAssistantDiv" class="catalog-item">
+        <p>ASISTENTE VIRTUAL</p>
+        <img src="assets/images/asistente.png" alt="ASISTENTE VIRTUAL">
+    </div>
+    <div class="catalog-item">
+        <a href="deseos.html">
+            <p>LISTA DE DESEOS</p>
+            <img src="assets/images/lista-deseos.png" alt="LISTA DE DESEOS">
+        </a>
+    </div>
+    <div class="catalog-item">
+        <a href="ofertas.html">
+            <p>OFERTAS Y NOVEDADES</p>
+            <img src="assets/images/ofertas.png" alt="OFERTAS Y NOVEDADES">
+        </a>
+    </div>
+</section>
+
+    <!-- ASISTENTE VIRTUAL (MODAL) -->
+    <div id="assistant-modal" class="assistant-modal">
+        <button class="close-assistant">✖</button>
+        <h2>🤖 Asistente Virtual</h2>
+        <p>¿En qué puedo ayudarte?</p>
+        <input type="text" id="assistant-input" placeholder="Escribe tu consulta...">
+        <button onclick="sendAssistantMessage()">Enviar</button>
+    </div>
+
+    <script src="menu-script.js"></script>
+</body>
+</html>

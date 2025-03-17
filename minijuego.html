@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuegos - Toyland App</title>
+    <link rel="stylesheet" href="minijuegos-style.css">
+</head>
+<body>
+
+    <!-- Barra superior con menú integrado -->
+    <header class="navbar">
+        <img src="assets/images/Logo2.png" alt="Logo Toyland" class="logo" id="logo">
+        <h1 class="title">MINIJUEGOS</h1>
+
+        <!-- Sección derecha: Perfil arriba y menú abajo -->
+        <div class="right-section">
+            <!-- Perfil arriba -->
+            <div class="profile-box">
+                <p id="userStatus"></p>
+                <button class="profile-btn">👤 Perfil</button>
+            </div>
+
+            <!-- Menú abajo -->
+            <nav class="main-menu">
+                <button class="menu-btn" id="homeButton">🏠</button>
+                <div class="dropdown">
+                    <button class="menu-btn">📞 ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Soporte</a>
+                        <a href="#">Atención al Cliente</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="menu-btn">📜 Secciones ▼</button>
+                    <div class="dropdown-content">
+                        <a href="catalogo.html">📦 CATÁLOGO DE JUGUETES</a>
+                        <a href="minijuego.html">🎮 MINIJUEGOS</a>
+                        <a href="#" id="openAssistantLink">🤖 ASISTENTE VIRTUAL</a>
+                        <a href="deseos.html">⭐ LISTA DE DESEOS</a>
+                        <a href="ofertas.html">🔥 OFERTAS Y NOVEDADES</a>
+                    </div>
+                </div>
+                <button class="menu-btn">🛒</button>
+                <button class="menu-btn">⭐</button>
+                <button class="menu-btn">❓</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NUEVA COLUMNA LATERAL IZQUIERDA CON IMAGEN -->
+    <section class="sidebar">
+        <img src="assets/images/publicidad.png" alt="Imagen lateral" class="sidebar-image">
+    </section>
+
+    <section class="search-filter-container">
+        <div class="search-filter-container">
+            <input type="text" class="search-bar" placeholder="Buscar minijuegos...">
+
+            <div class="rewards-board">
+                <span class="trophy-icon">🏆</span>
+                <span id="reward-count">0</span> Recompensas
+            </div>
+        </div>         
+    </section>
+
+    <section class="games-section">
+        <button class="game-button">
+            <img src="assets/images/juego1.png" alt="Juego 1">
+            <span class="game-title">Juego Aventura</span>
+        </button>
+    
+        <button class="game-button">
+            <img src="assets/images/juego2.png" alt="Juego 2">
+            <span class="game-title">Carreras Extrema</span>
+        </button>
+    
+        <button class="game-button">
+            <img src="assets/images/juego3.png" alt="Juego 3">
+            <span class="game-title">Puzzle Mágico</span>
+        </button>
+    </section>    
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/573204881964" class="whatsapp-button" target="_blank">
+        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- ASISTENTE VIRTUAL (MODAL) -->
+<div id="assistant-modal" class="assistant-modal">
+    <button class="close-assistant">✖</button>
+    <h2>🤖 Asistente Virtual</h2>
+    <p>¿En qué puedo ayudarte?</p>
+    <input type="text" id="assistant-input" placeholder="Escribe tu consulta...">
+    <button onclick="sendAssistantMessage()">Enviar</button>
+</div>
+
+    <script src="minijuegos-script.js"></script>
+</body>
+</html>

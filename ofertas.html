@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas y Novedades - Toyland App</title>
+    <link rel="stylesheet" href="ofertas-style.css">
+</head>
+<body>
+
+     <!-- Barra superior con menú integrado -->
+     <header class="navbar">
+        <img src="assets/images/Logo2.png" alt="Logo Toyland" class="logo" id="logo">
+        <h1 class="title">OFERTAS Y NOVEDADES</h1>
+
+        <!-- Sección derecha: Perfil arriba y menú abajo -->
+        <div class="right-section">
+            <!-- Perfil arriba -->
+            <div class="profile-box">
+                <p id="userStatus"></p>
+                <button class="profile-btn">👤  Perfil</button>
+            </div>
+
+            <!-- Menú abajo -->
+            <nav class="main-menu">                   
+                <button class="menu-btn" id="homeButton">🏠</button>
+                <div class="dropdown">
+                    <button class="menu-btn">📞 ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Soporte</a>
+                        <a href="#">Atención al Cliente</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="menu-btn">📜 Secciones ▼</button>
+                    <div class="dropdown-content">
+                        <a href="catalogo.html">📦 CATÁLOGO DE JUGUETES</a>
+                        <a href="minijuego.html">🎮 MINIJUEGOS</a>
+                        <a href="#" id="openAssistantLink">🤖 ASISTENTE VIRTUAL</a>
+                        <a href="deseos.html">⭐ LISTA DE DESEOS</a>
+                        <a href="ofertas.html">🔥 OFERTAS Y NOVEDADES</a>
+                    </div>
+                </div>
+                <button class="menu-btn">🛒</button>
+                <button class="menu-btn">⭐</button>
+                <button class="menu-btn">❓</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor del carrusel -->
+<section class="carousel-container">
+    <div class="carousel">
+        <img src="assets/images/oferta1.png" class="carousel-image" alt="Oferta 1">
+        <img src="assets/images/oferta2.png" class="carousel-image" alt="Oferta 2">
+        <img src="assets/images/oferta3.png" class="carousel-image" alt="Oferta 3">
+    </div>
+
+    <!-- Botones de navegación -->
+    <button class="prev-btn">⬅</button>
+    <button class="next-btn">➡</button>
+</section>
+
+     <!-- Botón de WhatsApp -->
+     <a href="https://wa.me/573204881964" class="whatsapp-button" target="_blank">
+        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- ASISTENTE VIRTUAL (MODAL) -->
+    <div id="assistant-modal" class="assistant-modal">
+        <button class="close-assistant">✖</button>
+        <h2>🤖 Asistente Virtual</h2>
+        <p>¿En qué puedo ayudarte?</p>
+        <input type="text" id="assistant-input" placeholder="Escribe tu consulta...">
+        <button onclick="sendAssistantMessage()">Enviar</button>
+    </div>
+
+        <!-- Botones de navegación -->
+        <button class="prev-btn">⬅</button>
+        <button class="next-btn">➡</button>
+    </section>
+
+    <script src="ofertas-script.js"></script>
+</body>
+</html>

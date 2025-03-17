@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyland App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <img src="assets/images/Logo.png" alt="Logo Toyland" class="logo">
+        <h2 class="slogan">Donde la diversión cobra vida</h2>
+
+        <!-- Botones -->
+        <div class="button-container">
+            <button class="btn btn-yellow" onclick="openModal('loginModal')">Iniciar Sesión</button>
+            <button class="btn btn-blue" onclick="openModal('registerModal')">Registrarse</button>
+            <button class="btn btn-red" onclick="redirectToMenu()">Acceder como Invitado</button>
+        </div>
+    </div>
+    
+    <!-- Audio para efectos de sonido -->
+    <audio id="hoverSound" src="assets/sounds/hover.mp3"></audio>
+    <audio id="clickSound" src="assets/sounds/click.mp3"></audio>
+
+    <!-- Modal de Iniciar Sesión -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Correo" required>
+                <div class="password-container">
+                    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">👁</button>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+   <!-- Modal de Registro -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+        <h2>Registrarse</h2>
+        <form id="registerForm"> <!-- ID agregado -->
+            <input type="text" id="registerName" placeholder="Nombre">
+            <input type="email" id="registerEmail" placeholder="Correo">
+            <div class="password-container">
+                <input type="password" id="registerPassword" placeholder="Contraseña">
+                <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">👁</button>
+            </div>
+            <button type="submit" class="btn-submit">Registrarse</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

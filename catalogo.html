@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Juguetes - Toyland App</title>
+    <link rel="stylesheet" href="catalogo-style.css">
+</head>
+<body>
+
+     <!-- Barra superior con menú integrado -->
+     <header class="navbar">
+        <img src="assets/images/Logo2.png" alt="Logo Toyland" class="logo" id="logo">
+        <h1 class="title">CATÁLOGO DE JUGUETES</h1>
+
+        <!-- Sección derecha: Perfil arriba y menú abajo -->
+        <div class="right-section">
+            <!-- Perfil arriba -->
+            <div class="profile-box">
+                <p id="userStatus"></p>
+                <button class="profile-btn">👤  Perfil</button>
+            </div>
+
+            <!-- Menú abajo -->
+            <nav class="main-menu">                   
+                <button class="menu-btn" id="homeButton">🏠</button>
+                <div class="dropdown">
+                    <button class="menu-btn">📞 ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">Soporte</a>
+                        <a href="#">Atención al Cliente</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="menu-btn">📜 Secciones ▼</button>
+                    <div class="dropdown-content">
+                        <a href="catalogo.html">📦 CATÁLOGO DE JUGUETES</a>
+                        <a href="minijuego.html">🎮 MINIJUEGOS</a>
+                        <a href="#" id="openAssistantLink">🤖 ASISTENTE VIRTUAL</a>
+                        <a href="deseos.html">⭐ LISTA DE DESEOS</a>
+                        <a href="ofertas.html">🔥 OFERTAS Y NOVEDADES</a>
+                    </div>
+                </div>
+                <button class="menu-btn">🛒</button>
+                <button class="menu-btn">⭐</button>
+                <button class="menu-btn">❓</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="search-filter-container">
+        <div class="search-filter-container">
+            <input type="text" class="search-bar" placeholder="Buscar juguetes...">
+            
+            <div class="dropdown">
+                <button class="filter-btn">Filtrar ▼</button>
+                <div class="dropdown-content">
+                    <button class="filter-option" onclick="filtrar('precio')">Precio</button>
+                    <button class="filter-option" onclick="filtrar('popularidad')">Popularidad</button>
+                </div>
+            </div>
+        </div>
+              
+    </section>
+
+    <!-- Sección de Juguetes -->
+    <section class="catalog-container">
+        <!-- Cuadros de juguetes -->
+        <div class="catalog-item">
+            <img src="assets/images/juguete1.png" alt="Juguete 1">
+            <p>Cubo Rubik</p>
+            <div class="button-container">
+                <button class="add-to-wishlist" data-tooltip="Añadir a lista de deseos">⭐</button>
+                <button class="add-to-cart" data-tooltip="Añadir al carrito">🛒</button>
+            </div>
+        </div>
+
+        <div class="catalog-item">
+            <img src="assets/images/juguete2.png" alt="Juguete 2">
+            <p>Transformer Optimus Prime</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+
+        <div class="catalog-item">
+            <img src="assets/images/juguete3.png" alt="Juguete 3">
+            <p>Skateboard</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+
+        <div class="catalog-item">
+            <img src="assets/images/juguete4.png" alt="Juguete 4">
+            <p>Set Peluches</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+
+        <div class="catalog-item">
+            <img src="assets/images/juguete5.png" alt="Juguete 5">
+            <p>Helicoptero</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+        
+        <div class="catalog-item">
+            <img src="assets/images/juguete6.png" alt="Juguete 6">
+            <p>Barco</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+        
+        <div class="catalog-item">
+            <img src="assets/images/juguete7.png" alt="Juguete 7">
+            <p>Tren Armable</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+        
+        <div class="catalog-item">
+            <img src="assets/images/juguete8.png" alt="Juguete 8">
+            <p>Set Lego</p>
+            <div class="button-container">
+                <button class="add-to-wishlist">⭐</button>
+                <button class="add-to-cart">🛒</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/573204881964" class="whatsapp-button" target="_blank">
+        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+      <!-- ASISTENTE VIRTUAL (MODAL) -->
+      <div id="assistant-modal" class="assistant-modal">
+        <button class="close-assistant">✖</button>
+        <h2>🤖 Asistente Virtual</h2>
+        <p>¿En qué puedo ayudarte?</p>
+        <input type="text" id="assistant-input" placeholder="Escribe tu consulta...">
+        <button onclick="sendAssistantMessage()">Enviar</button>
+    </div>
+
+    <script src="./catalogo-script.js" defer></script>
+</body>
+</html>
