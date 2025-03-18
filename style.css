@@ -6,24 +6,29 @@
     font-family: Arial, sans-serif;
 }
 
+/* Fondo de la página */
 body {
-    background-image: url('./assets/images/Background.jpg'); 
+    background-image: url('./assets/images/Background.jpg'); /* Verifica la ruta */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: block; /* 🔹 Cambiamos de flex a block */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
+
+/* Contenedor principal */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* 🔹 Evita que lo centre de forma extraña */
+    justify-content: flex-start; /* Cambiado de center a flex-start */
     text-align: center;
     width: 100%;
-    min-height: 100vh;
-    padding-top: 5vh;
+    height: 100vh;
+    padding-top: 10vh; /* 🔹 Subimos todo el contenido */
 }
 
 /* Contenedor de botones */
@@ -35,10 +40,9 @@ body {
     margin-top: 10px; /* 🔹 Subimos los botones */
 }
 
+/* Logo */
 .logo {
-    width: 100% !important;
-    max-width: 1200px !important; /* 🔹 Asegura que no crezca más de esto */
-    height: auto; /* 🔹 Mantiene la proporción */
+    width: 1200px;
     margin-bottom: -250px;
     animation: fadeIn 1.5s ease-in-out;
 }
