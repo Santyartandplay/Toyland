@@ -24,27 +24,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Cambiado de flex-start a center */
-    text-align: center;
+    justify-content: center; /* Centrado vertical y horizontal */
     width: 100%;
-    min-height: 100vh; /* Mantener el contenedor al 100% de altura */
-    padding-top: 10vh; /* Ajustar este valor para mejorar la alineación */
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    padding-top: 10vh; /* Añadimos un pequeño margen superior para evitar que se pegue al borde superior */
 }
+
 
 /* Contenedor de botones */
 .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-top: 20px; /* Ajusta el espacio entre el logo y los botones */
+    gap: 20px; /* Ajustamos el espacio entre los botones */
+    margin-top: 20px; /* Añadimos un margen superior para que no estén pegados al logo */
 }
 
 /* Logo */
 .logo {
-    width: 100%; /* Esto hace que el logo ocupe el 100% del contenedor */
-    max-width: 1200px; /* Limitamos el tamaño máximo */
-    margin-bottom: 20px; /* Ajusta el margen inferior para la separación */
+    width: 100%; /* El logo ocupa el 100% del contenedor disponible */
+    max-width: 1200px; /* Máximo tamaño de 1200px para que no se haga más grande */
+    margin-bottom: 50px; /* Añadimos espacio debajo del logo */
     animation: fadeIn 1.5s ease-in-out;
 }
 
