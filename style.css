@@ -26,7 +26,7 @@ body {
     align-items: center;
     justify-content: center; /* Centrado vertical y horizontal */
     width: 100%;
-    min-height: 80vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    min-height: 20vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
     padding-top: 20vh; /* Añadimos un pequeño margen superior para evitar que se pegue al borde superior */
 }
 
@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px; /* Ajustamos el espacio entre los botones */
-    margin-top: -20px; /* Añadimos un margen superior para que no estén pegados al logo */
+    margin-top: -60px; /* Añadimos un margen superior para que no estén pegados al logo */
 }
 
 /* Logo */
