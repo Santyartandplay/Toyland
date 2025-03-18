@@ -27,7 +27,7 @@ body {
     justify-content: center; /* Centrado vertical y horizontal */
     width: 100%;
     min-height: 80vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-    padding-top: 100vh; /* Añadimos un pequeño margen superior para evitar que se pegue al borde superior */
+    padding-top: 20vh; /* Añadimos un pequeño margen superior para evitar que se pegue al borde superior */
 }
 
 
