@@ -35,4 +35,3 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("homeButton").addEventListener("click", function() {
     window.location.href = "menu.html"; // Asegúrate de que el nombre del archivo sea correcto
 });
-
