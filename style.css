@@ -39,7 +39,7 @@ body {
     width: 100% !important;
     max-width: 1200px !important; /* 🔹 Asegura que no crezca más de esto */
     height: auto; /* 🔹 Mantiene la proporción */
-    margin-bottom: 0px;
+    margin-bottom: -250px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
