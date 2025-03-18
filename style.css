@@ -27,7 +27,7 @@ body {
     justify-content: flex-start; /* Cambiado de center a flex-start */
     text-align: center;
     width: 100%;
-    height: 50vh;
+    height: auto;
     padding-top: 5vh; /* 🔹 Subimos todo el contenido */
 }
 
