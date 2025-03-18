@@ -52,7 +52,7 @@ body {
     font-size: 25px;
     font-weight: bold;
     color: white;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.8s ease-in-out forwards;
 }
