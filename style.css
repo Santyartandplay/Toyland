@@ -37,8 +37,8 @@ body {
 }
 
 .logo {
-    width: 100%;
-    max-width: 1200px; /* 🔹 Asegura que no crezca más de esto */
+    width: 100% !important;
+    max-width: 1200px !important; /* 🔹 Asegura que no crezca más de esto */
     height: auto; /* 🔹 Mantiene la proporción */
     margin-bottom: 0px;
     animation: fadeIn 1.5s ease-in-out;
