@@ -42,7 +42,7 @@ body {
 
 /* Logo */
 .logo {
-    width: 0px;
+    width: 1200px;
     margin-bottom: 250px;
     animation: fadeIn 1.5s ease-in-out;
 }
