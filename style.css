@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* 🔹 Asegura que todo el contenido se centre */
+    justify-content: flex-start; /* 🔹 Evita que lo centre de forma extraña */
     text-align: center;
     width: 100%;
     min-height: 100vh;
