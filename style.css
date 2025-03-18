@@ -36,9 +36,10 @@ body {
     bottom: 20%;
 }
 
-/* Logo */
 .logo {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px; /* 🔹 Asegura que no crezca más de esto */
+    height: auto; /* 🔹 Mantiene la proporción */
     margin-bottom: 0px;
     animation: fadeIn 1.5s ease-in-out;
 }
