@@ -24,11 +24,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Cambiado de center a flex-start */
+    justify-content: center; /* Cambiado de flex-start a center */
     text-align: center;
     width: 100%;
-    height: 100vh;
-    padding-top: 0vh; /* 🔹 Subimos todo el contenido */
+    min-height: 100vh; /* Mantener el contenedor al 100% de altura */
+    padding-top: 10vh; /* Ajustar este valor para mejorar la alineación */
 }
 
 /* Contenedor de botones */
@@ -37,13 +37,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: 10px; /* 🔹 Subimos los botones */
+    margin-top: 20px; /* Ajusta el espacio entre el logo y los botones */
 }
 
 /* Logo */
 .logo {
-    width: 1200px;
-    margin-bottom: 250px;
+    width: 100%; /* Esto hace que el logo ocupe el 100% del contenedor */
+    max-width: 1200px; /* Limitamos el tamaño máximo */
+    margin-bottom: 20px; /* Ajusta el margen inferior para la separación */
     animation: fadeIn 1.5s ease-in-out;
 }
 
