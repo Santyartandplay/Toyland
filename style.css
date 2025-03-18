@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: 5px; /* 🔹 Subimos los botones */
+    margin-top: -50px; /* 🔹 Subimos los botones */
 }
 
 /* Logo */
