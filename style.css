@@ -44,7 +44,7 @@ body {
 .logo {
     width: 100%; /* El logo ocupa el 100% del contenedor disponible */
     max-width: 1200px; /* Máximo tamaño de 1200px para que no se haga más grande */
-    margin-bottom: 10px; /* Añadimos espacio debajo del logo */
+    margin-bottom: -40px; /* Añadimos espacio debajo del logo */
     animation: fadeIn 1.5s ease-in-out;
     margin-top: -50px;
 }
