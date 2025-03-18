@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 0vh;
+    min-height: 100vh;
 }
 
 
@@ -26,7 +26,7 @@ body {
     align-items: center;
     justify-content: center; /* Centrado vertical y horizontal */
     width: 100%;
-    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    min-height: 0vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
     padding-top: 10vh; /* Añadimos un pequeño margen superior para evitar que se pegue al borde superior */
 }
 
