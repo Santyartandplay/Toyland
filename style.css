@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 10px; /* Ajustamos el espacio entre los botones */
-    margin-top: 20px; /* Añadimos un margen superior para que no estén pegados al logo */
+    margin-top: -20px; /* Añadimos un margen superior para que no estén pegados al logo */
 }
 
 /* Logo */
