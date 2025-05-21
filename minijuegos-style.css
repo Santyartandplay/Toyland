@@ -294,3 +294,32 @@ body {
     cursor: pointer;
 }
 
+.game-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  border-radius: 10px;
+  z-index: 1500;
+}
+
+.game-modal.show {
+  display: block;
+}
+
+.game-modal .close-game-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
